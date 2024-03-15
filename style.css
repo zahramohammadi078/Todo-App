@@ -1,7 +1,7 @@
 html, body {
     height: 100%;
     margin: 0;
-    background-color: #395886;
+    background-color: #18335c;
 }
 
 .all-items {
@@ -78,6 +78,8 @@ input {
     flex: 1; 
     font-size: 1.2rem;
     color: #05224d;
+    outline: none;
+    caret-color: #8aaee0;
   
 }
 
@@ -105,10 +107,35 @@ img{
     justify-content: center; 
     align-items: center;
     font-size: 1.5rem;
-    color: #395886;
+    color: #18335c;
     margin-top: 17px;
 
 }
+
+/*---------------------------*/
+
+.add-new-item{
+    width: 96.7%;
+    height: 40px;
+    border: 1px solid #d5deef;
+    background-color: #d5deef;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    padding: 6px;
+    margin-top: 7px;
+}
+/* .todo-list {
+    list-style: none;
+    padding: 0;
+  }
+  .todo-item {
+    margin-bottom: 5px;
+    background-color: #f0f0f0;
+    padding: 10px;
+  } */
 
 @media only screen and (max-width: 600px) {
     .card {
