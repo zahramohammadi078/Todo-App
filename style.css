@@ -15,7 +15,7 @@ html, body {
 .card {
     border: 1px solid #8aaee0;
     width: 80%; 
-    max-width: 400px; 
+    max-width: 520px; 
     height: auto; 
     background-color: #8aaee0;
     border-radius: 10px;
@@ -24,6 +24,7 @@ html, body {
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
     padding: 20px; 
+    
 }
 
 .up {
@@ -112,11 +113,16 @@ img{
 
 }
 
-/*---------------------------*/
 
-.add-new-item{
-    width: 96.7%;
-    height: 40px;
+
+
+
+  /*-----------------------------------------------------------------------------*/
+
+  .todo-items{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     border: 1px solid #d5deef;
     background-color: #d5deef;
     border-radius: 5px;
@@ -124,18 +130,33 @@ img{
     -moz-border-radius: 5px;
     -ms-border-radius: 5px;
     -o-border-radius: 5px;
-    padding: 6px;
-    margin-top: 7px;
+    margin-top: 10px;
 }
-/* .todo-list {
-    list-style: none;
-    padding: 0;
+
+  .todotext{
+    /* width: 55%; */
+    padding-left: 17px;
+    font-size: 1.1rem;
+    color: #05224d;
+    flex: 1;
   }
-  .todo-item {
-    margin-bottom: 5px;
-    background-color: #f0f0f0;
-    padding: 10px;
-  } */
+  .btn{
+    height: 35px;
+    border: 1px solid #05224d;
+    background-color: #05224d;
+    color: #d5deef;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 2px;
+  }
+  .allbtns{
+    padding-right: 5px;
+    /* display: inline-block; */
+
+  }
+  .b1{
+       width: 4.1rem;
+  }
 
 @media only screen and (max-width: 600px) {
     .card {
@@ -143,5 +164,11 @@ img{
     }
     input, .add-btn {
         width: 100%; 
+    }
+    .b1{
+        width: 2.9rem;
+    }
+    .todotext{
+        padding-left: 10px;
     }
 }
