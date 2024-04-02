@@ -19,7 +19,7 @@ function creatTodoItem(todoObj) {
   let btnOne = document.createElement("button");
   btnOne.classList.add("btn");
   btnOne.classList.add("Complate");
-  btnOne.textContent = "Complate";
+  btnOne.textContent = "Complete";
 
   btnOne.addEventListener("click", function () {
     if (newP.style.textDecoration === "line-through") {
