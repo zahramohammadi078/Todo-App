@@ -84,9 +84,9 @@ input {
   
 }
 
-input:focus{
+/* input:focus{
     background-color: #8aaee0;
-}
+} */
 
 img{
     width: 40px;
