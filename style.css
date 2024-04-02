@@ -84,6 +84,10 @@ input {
   
 }
 
+input:focus{
+    background-color: #8aaee0;
+}
+
 img{
     width: 40px;
     height: 40px;
@@ -164,6 +168,7 @@ img{
     justify-content: center;
     align-items: center;
     margin-right: 300px;
+   
     /* margin-bottom: -41px; */
   }
   .filter-btn{
@@ -180,6 +185,7 @@ img{
     -moz-border-radius: 5px 5px 0px 0px;
     -ms-border-radius: 5px 5px 0px 0px;
     -o-border-radius: 5px 5px 0px 0px;
+    
 }
 
 @media only screen and (max-width: 600px) {
@@ -194,5 +200,12 @@ img{
     }
     .todotext{
         padding-left: 10px;
+    }
+    .buttons{
+        display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 0;
+       
     }
 }
