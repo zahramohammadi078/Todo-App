@@ -1,6 +1,7 @@
 let inputBox = document.querySelector(".input-box");
 let addBtn = document.querySelector(".add-btn");
 let card = document.querySelector(".card");
+let container = document.querySelector(".container");
 let todoArray = [];
 
 addBtn.addEventListener("click", addBtnFunc);
@@ -60,7 +61,7 @@ function creatTodoItem(todoObj) {
   btnThree.classList.add("btn");
   btnThree.classList.add("b1");
   btnThree.classList.add("Edite");
-  btnThree.textContent = "Edite";
+  btnThree.textContent = "Edit";
 
   btnThree.addEventListener("click", function () {
     let editText = prompt("Edit the item:", newP.textContent);
@@ -75,7 +76,7 @@ function creatTodoItem(todoObj) {
 
   newDivOne.append(newP, newDivTwo);
 
-  card.append(newDivOne);
+  container.append(newDivOne);
 }
 /*--------------------------enterBtn and keydown-------------------------------*/
 function enterFunc(event) {

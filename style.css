@@ -1,3 +1,9 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+  }
 html, body {
     height: 100%;
     margin: 0;
@@ -15,7 +21,7 @@ html, body {
 .card {
     border: 1px solid #8aaee0;
     width: 80%; 
-    max-width: 520px; 
+    max-width: 543px; 
     height: auto; 
     background-color: #8aaee0;
     border-radius: 10px;
@@ -81,7 +87,14 @@ input {
     color: #05224d;
     outline: none;
     caret-color: #8aaee0;
+
+
   
+}
+
+input::selection{
+    color: #8aaee0;
+    background-color: #05224d;
 }
 
 /* input:focus{
@@ -101,6 +114,7 @@ img{
     align-items: center;
     gap: 20px;
     margin-bottom: 55px;
+    margin-top: 31px;
 }
 .text{
     font-size: 2rem;
@@ -108,14 +122,20 @@ img{
 }
 
 .text-down{
-    display: flex;
-    
-    justify-content: center; 
-    align-items: center;
+
     font-size: 1.5rem;
     color: #18335c;
-    margin-top: 17px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+   
 
+}
+
+.down{
+    
+    margin-top: 30px;
 }
 
 
@@ -136,6 +156,7 @@ img{
     -ms-border-radius: 5px;
     -o-border-radius: 5px;
     margin-top: 10px;
+    height: 50px;
 }
 
   .todotext{
@@ -153,6 +174,7 @@ img{
     border-radius: 5px;
     cursor: pointer;
     margin: 2px;
+    width: 77px;
   }
   .allbtns{
     padding-right: 5px;
@@ -167,7 +189,7 @@ img{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-right: 300px;
+    margin-right: 278px;
    
     /* margin-bottom: -41px; */
   }
@@ -209,3 +231,12 @@ img{
        
     }
 }
+
+
+
+.container{
+    /* border: 1px solid red; */
+    max-height: 300px;
+    overflow: auto;
+}
+
