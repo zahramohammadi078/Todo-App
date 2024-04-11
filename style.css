@@ -87,6 +87,7 @@ input {
     color: #05224d;
     outline: none;
     caret-color: #8aaee0;
+  
 
 
   
@@ -165,6 +166,9 @@ img{
     font-size: 1.1rem;
     color: #05224d;
     flex: 1;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
   .btn{
     height: 35px;
