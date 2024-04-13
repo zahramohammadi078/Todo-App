@@ -1,8 +1,8 @@
-let inputBox = document.querySelector(".input-box");
-let addBtn = document.querySelector(".add-btn");
-let card = document.querySelector(".card");
-let container = document.querySelector(".container");
-let todoArray = [];
+const inputBox = document.querySelector(".input-box");
+const addBtn = document.querySelector(".add-btn");
+const card = document.querySelector(".card");
+const container = document.querySelector(".container");
+const todoArray = [];
 
 addBtn.addEventListener("click", addBtnFunc);
 inputBox.addEventListener("keydown", enterFunc);
