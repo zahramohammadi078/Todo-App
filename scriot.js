@@ -120,55 +120,46 @@ function btnUpFunc(event) {
     todoItems.forEach((item) => {
       if (item.querySelector(".Complate").textContent === "incomplete") {
         item.style.display = "flex";
-        
       } else {
         item.style.display = "none";
-       
       }
     });
   } else if (event.target.classList.contains("active-btn")) {
     todoItems.forEach((item) => {
       if (item.querySelector(".Complate").textContent != "incomplete") {
         item.style.display = "flex";
-        
       } else {
         item.style.display = "none";
-        
       }
     });
   }
 }
 //////
 
+const allBtn = document.querySelector(".all-btn");
+const completeBtn = document.querySelector(".complete-btn");
+const activeBtn = document.querySelector(".active-btn");
 
-  const allBtn = document.querySelector('.all-btn');
-  const completeBtn = document.querySelector('.complete-btn');
-  const activeBtn = document.querySelector('.active-btn');
+function setBackgroundColor(btn, bgColor, bgtextcolor, bgborder) {
+  btn.style.backgroundColor = bgColor;
+  btn.style.color = bgtextcolor;
+  btn.style.border = bgborder;
+}
 
-  
-  function setBackgroundColor(btn, bgColor,bgtextcolor,bgborder) {
-    btn.style.backgroundColor = bgColor;
-    btn.style.color=bgtextcolor
-    btn.style.border=bgborder
-  }
+allBtn.addEventListener("click", function () {
+  setBackgroundColor(allBtn, "#05224d", "cornsilk", "#05224d");
+  setBackgroundColor(completeBtn, "", "");
+  setBackgroundColor(activeBtn, "", "");
+});
 
-  
-  allBtn.addEventListener('click', function () {
-    setBackgroundColor(allBtn, '#05224d','cornsilk','#05224d');
-    setBackgroundColor(completeBtn, '',''); 
-    setBackgroundColor(activeBtn, '',''); 
-  });
+completeBtn.addEventListener("click", function () {
+  setBackgroundColor(completeBtn, "#05224d", "cornsilk", "#05224d");
+  setBackgroundColor(allBtn, "", "");
+  setBackgroundColor(activeBtn, "", "");
+});
 
-  
-  completeBtn.addEventListener('click', function () {
-    setBackgroundColor(completeBtn, '#05224d','cornsilk','#05224d');
-    setBackgroundColor(allBtn, '',''); 
-    setBackgroundColor(activeBtn, '',''); 
-  });
-
-  
-  activeBtn.addEventListener('click', function () {
-    setBackgroundColor(activeBtn, '#05224d','cornsilk','#05224d');
-    setBackgroundColor(allBtn, '',''); 
-    setBackgroundColor(completeBtn, '',''); 
-  });
+activeBtn.addEventListener("click", function () {
+  setBackgroundColor(activeBtn, "#05224d", "cornsilk", "#05224d");
+  setBackgroundColor(allBtn, "", "");
+  setBackgroundColor(completeBtn, "", "");
+});
