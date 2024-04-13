@@ -155,20 +155,20 @@ function btnUpFunc(event) {
   
   allBtn.addEventListener('click', function () {
     setBackgroundColor(allBtn, '#05224d','cornsilk','#05224d');
-    setBackgroundColor(completeBtn, ''); 
-    setBackgroundColor(activeBtn, ''); 
+    setBackgroundColor(completeBtn, '',''); 
+    setBackgroundColor(activeBtn, '',''); 
   });
 
   
   completeBtn.addEventListener('click', function () {
     setBackgroundColor(completeBtn, '#05224d','cornsilk','#05224d');
-    setBackgroundColor(allBtn, ''); 
-    setBackgroundColor(activeBtn, ''); 
+    setBackgroundColor(allBtn, '',''); 
+    setBackgroundColor(activeBtn, '',''); 
   });
 
   
   activeBtn.addEventListener('click', function () {
     setBackgroundColor(activeBtn, '#05224d','cornsilk','#05224d');
-    setBackgroundColor(allBtn, ''); 
-    setBackgroundColor(completeBtn, ''); 
+    setBackgroundColor(allBtn, '',''); 
+    setBackgroundColor(completeBtn, '',''); 
   });
