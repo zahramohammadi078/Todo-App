@@ -2,6 +2,9 @@ const inputBox = document.querySelector(".input-box");
 const addBtn = document.querySelector(".add-btn");
 const card = document.querySelector(".card");
 const container = document.querySelector(".container");
+const allBtn = document.querySelector(".all-btn");
+const completeBtn = document.querySelector(".complete-btn");
+const activeBtn = document.querySelector(".active-btn");
 const todoArray = [];
 
 addBtn.addEventListener("click", addBtnFunc);
@@ -13,7 +16,7 @@ function creatTodoItem(todoObj) {
   let newP = document.createElement("p");
   newP.classList.add("todotext");
   newP.textContent = todoObj.title;
-  // newDivOne.append(newP)
+
   let newDivTwo = document.createElement("div");
   newDivTwo.classList.add("allbtns");
   //btnOne
@@ -36,9 +39,8 @@ function creatTodoItem(todoObj) {
     }
 
     console.log(todoArray);
-    console.log("click btn one");
   });
-  // newDivTwo.append(btnOne)
+
   //btnTwo
   let btnTwo = document.createElement("button");
   btnTwo.classList.add("btn");
@@ -52,10 +54,9 @@ function creatTodoItem(todoObj) {
       return todo.id !== todoObj.id;
     });
 
-    console.log("click btnTwo");
     console.log(todoArray);
   });
-  // newDivTwo.append(btnTwo)
+
   //btnThree
   let btnThree = document.createElement("button");
   btnThree.classList.add("btn");
@@ -69,7 +70,7 @@ function creatTodoItem(todoObj) {
       newP.textContent = editText;
       todoObj.title = editText;
     }
-    console.log("click btnThree");
+
     console.log(todoArray);
   });
   newDivTwo.append(btnOne, btnTwo, btnThree);
@@ -102,20 +103,16 @@ function addBtnFunc() {
   } else {
     // alert("it is empty");
     Swal.fire({
-      // icon: 'error',
       title: "Please enter your desired item.",
       width: 500,
       padding: "3em",
       color: "#18335c",
       backdrop: `
         rgba(0,0,123,0.4)
-        url("/images/nyan-cat.gif")
         left top
         no-repeat
-      `
-    })
-
-    //   return
+      `,
+    });
   }
   console.log(todoArray);
 }
@@ -129,6 +126,9 @@ function btnUpFunc(event) {
 
   if (event.target.classList.contains("all-btn")) {
     todoItems.forEach((item) => (item.style.display = "flex"));
+    setBackgroundColor(allBtn, "#05224d", "cornsilk", "#05224d");
+    setBackgroundColor(completeBtn, "", "", "");
+    setBackgroundColor(activeBtn, "", "", "");
   } else if (event.target.classList.contains("complete-btn")) {
     todoItems.forEach((item) => {
       if (item.querySelector(".Complate").textContent === "incomplete") {
@@ -137,6 +137,9 @@ function btnUpFunc(event) {
         item.style.display = "none";
       }
     });
+    setBackgroundColor(completeBtn, "#05224d", "cornsilk", "#05224d");
+    setBackgroundColor(allBtn, "", "", "");
+    setBackgroundColor(activeBtn, "", "", "");
   } else if (event.target.classList.contains("active-btn")) {
     todoItems.forEach((item) => {
       if (item.querySelector(".Complate").textContent != "incomplete") {
@@ -145,34 +148,14 @@ function btnUpFunc(event) {
         item.style.display = "none";
       }
     });
+    setBackgroundColor(activeBtn, "#05224d", "cornsilk", "#05224d");
+    setBackgroundColor(allBtn, "", "", "");
+    setBackgroundColor(completeBtn, "", "", "");
   }
 }
-//////
-
-const allBtn = document.querySelector(".all-btn");
-const completeBtn = document.querySelector(".complete-btn");
-const activeBtn = document.querySelector(".active-btn");
 
 function setBackgroundColor(btn, bgColor, bgtextcolor, bgborder) {
   btn.style.backgroundColor = bgColor;
   btn.style.color = bgtextcolor;
   btn.style.border = bgborder;
 }
-
-allBtn.addEventListener("click", function () {
-  setBackgroundColor(allBtn, "#05224d", "cornsilk", "#05224d");
-  setBackgroundColor(completeBtn, "", "","");
-  setBackgroundColor(activeBtn, "", "","");
-});
-
-completeBtn.addEventListener("click", function () {
-  setBackgroundColor(completeBtn, "#05224d", "cornsilk", "#05224d");
-  setBackgroundColor(allBtn, "", "","");
-  setBackgroundColor(activeBtn, "", "","");
-});
-
-activeBtn.addEventListener("click", function () {
-  setBackgroundColor(activeBtn, "#05224d", "cornsilk", "#05224d");
-  setBackgroundColor(allBtn, "", "","");
-  setBackgroundColor(completeBtn, "", "","");
-});
