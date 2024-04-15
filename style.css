@@ -9,6 +9,7 @@ body {
   height: 100%;
   margin: 0;
   background-color: #18335c;
+  font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif; 
 }
 
 .all-items {

@@ -100,7 +100,20 @@ function addBtnFunc() {
 
     inputBox.value = "";
   } else {
-    alert("it is empty");
+    // alert("it is empty");
+    Swal.fire({
+      // icon: 'error',
+      title: "Please enter your desired item.",
+      width: 500,
+      padding: "3em",
+      color: "#18335c",
+      backdrop: `
+        rgba(0,0,123,0.4)
+        url("/images/nyan-cat.gif")
+        left top
+        no-repeat
+      `
+    })
 
     //   return
   }
@@ -148,18 +161,18 @@ function setBackgroundColor(btn, bgColor, bgtextcolor, bgborder) {
 
 allBtn.addEventListener("click", function () {
   setBackgroundColor(allBtn, "#05224d", "cornsilk", "#05224d");
-  setBackgroundColor(completeBtn, "", "");
-  setBackgroundColor(activeBtn, "", "");
+  setBackgroundColor(completeBtn, "", "","");
+  setBackgroundColor(activeBtn, "", "","");
 });
 
 completeBtn.addEventListener("click", function () {
   setBackgroundColor(completeBtn, "#05224d", "cornsilk", "#05224d");
-  setBackgroundColor(allBtn, "", "");
-  setBackgroundColor(activeBtn, "", "");
+  setBackgroundColor(allBtn, "", "","");
+  setBackgroundColor(activeBtn, "", "","");
 });
 
 activeBtn.addEventListener("click", function () {
   setBackgroundColor(activeBtn, "#05224d", "cornsilk", "#05224d");
-  setBackgroundColor(allBtn, "", "");
-  setBackgroundColor(completeBtn, "", "");
+  setBackgroundColor(allBtn, "", "","");
+  setBackgroundColor(completeBtn, "", "","");
 });
